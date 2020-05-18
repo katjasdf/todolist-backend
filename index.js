@@ -32,13 +32,13 @@ app.get('/api/todos/:id', (request, response, next) => {
 app.post('/api/todos', (request, response) => {
   const body = request.body
 
-  if (body.title === undefined) {
-    return response.status(400).json({ error: 'title missing' })
+  if (body.content === undefined) {
+    return response.status(400).json({ error: 'content missing' })
   }
 
   const todo = new Todo({
-    title: body.title,
-    description: body.description,
+    content: body.content,
+    important: body.important || false,
     date: new Date(),
   })
 
@@ -59,8 +59,8 @@ app.put('/api/todos/:id', (request, response, next) => {
     const body = request.body
 
     const todo = {
-        title: body.title,
-        description: body.description,
+        content: body.content,
+        important: body.important,
     }
 
     Todo.findByIdAndUpdate(request.params.id, todo, { new: true })

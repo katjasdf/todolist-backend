@@ -13,9 +13,9 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   })
 
 const todoSchema = new mongoose.Schema({
-  title: String,
+  content: String,
   date: Date,
-  description: String,
+  important: Boolean,
 })
 
 todoSchema.set('toJSON', {

@@ -13,17 +13,17 @@ const url =
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const todoSchema = new mongoose.Schema({
-  title: String,
+  content: String,
   date: Date,
-  description: String,
+  important: Boolean,
 })
 
 const Todo = mongoose.model('Todo', todoSchema)
 
 const todo = new Todo({
-  title: 'Callback-functions suck',
+  content: 'Callback-functions suck',
   date: new Date(),
-  description: 'but not always',
+  important: true,
 })
 
 /*
