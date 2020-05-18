@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
-
 mongoose.set('useFindAndModify', false)
-
 const url = process.env.MONGODB_URI
 
 console.log('connecting to', url)
@@ -15,9 +13,9 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   })
 
 const todoSchema = new mongoose.Schema({
-  content: String,
+  title: String,
   date: Date,
-  important: Boolean,
+  description: String,
 })
 
 todoSchema.set('toJSON', {
