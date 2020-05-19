@@ -1,5 +1,5 @@
 # todolist-backend
-This project is part of Haaga-Helia UAS Software Development Technologies course project and this is the backend part of the project. You can find frontend from [here](https://github.com/katjasdf/todolist-frontend)
+This project is part of Haaga-Helia UAS Software Development Technologies course project and this is the backend part of the project. You can find frontend side of the project from [here.](https://github.com/katjasdf/todolist-frontend)
 
 ## About The Project
 The application is simple todo app, where user can create, read, update and delete data. The main goal of this project was for me to learn fullstack development, especially node.js, Express and MongoDB. Backend is running on Heroku and data is saved in MongoDB cluster. For frontend development I used Expo-CLi and for HTTP request handling axios client.
