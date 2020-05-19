@@ -1,3 +1,4 @@
+// test file for running mongo from terminal
 const mongoose = require('mongoose')
 
 if ( process.argv.length<3 ) {
